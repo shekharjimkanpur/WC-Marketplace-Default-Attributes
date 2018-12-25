@@ -1,0 +1,115 @@
+ <script> 
+ //strict editing name of attribute
+    document.getElementById("attributes_name_0").disabled = true;
+    //making attribute  visible 
+    document.getElementById("attributes_is_visible_0").checked = true;
+    //strict editing checkbox
+    document.getElementById("attributes_is_visible_0").style.display = "none";
+            //document.getElementById("pruduct_manager_submit_button").style="pointer-events:none";
+    var x1,x2,x3,x4,x5,x6;
+    var count=0;
+    //initialising first attribute to for example product like book i.e attribute author
+    document.getElementById("attributes_name_0").value = 'Author';
+    document.getElementById("attributes_value_0").setAttribute("placeholder", "Enter Author name here");
+  var elements = document.querySelectorAll(".add_multi_input_block.multi_input_block_manupulate.button-primary");
+  if (elements.length) {
+    elements[2].id = "click+";
+  }
+    document.getElementById("click+").addEventListener("click", myFunction);
+window.onload=function(){
+    var x=document.getElementById("ui-id-15");
+    if(x)
+    x.addEventListener("click", myFunction);
+    var y=document.getElementById("current-endpoint-title-wrapper");
+    if(y)
+    y.addEventListener("onmouseover",myFunction1);
+     var x1=document.getElementById("attributes_value_0");
+     if(x1.value!="")
+     x1.addEventListener("click",myFunction1);
+}
+    
+    // function starts here
+   function myFunction() {//function starts 
+       if(count==0)
+       {
+        document.getElementById("click+").click();
+         document.getElementById("click+").click();
+          document.getElementById("click+").click();
+           document.getElementById("click+").click();
+            document.getElementById("click+").click();
+            document.getElementById("click+").click();
+             //hide +button 
+    document.getElementById("click+").style.display="none";
+  document.getElementById("attributes_name_1").value = "Language";
+  document.getElementById("attributes_value_1").setAttribute("placeholder", "Enter Language");
+  document.getElementById("attributes_name_2").value = "Binding";
+  document.getElementById("attributes_value_2").setAttribute("placeholder", "Enter Binding");
+  document.getElementById("attributes_name_3").value = "Year";
+  document.getElementById("attributes_value_3").setAttribute("placeholder", "Enter Year");
+  document.getElementById("attributes_name_4").value = "Publisher";
+  document.getElementById("attributes_value_4").setAttribute("placeholder", "Enter Publisher Name here");
+  document.getElementById("attributes_name_5").value = "ISBN";
+  document.getElementById("attributes_value_5").setAttribute("placeholder", "Enter ISBN Of book if available");
+  document.getElementById("attributes_name_6").value = "Edition";
+  document.getElementById("attributes_value_6").setAttribute("placeholder", "Enter Edition of book here");
+   document.getElementById("attributes_is_visible_1").checked = true; 
+   document.getElementById("attributes_is_visible_2").checked = true;
+   document.getElementById("attributes_is_visible_3").checked = true; 
+   document.getElementById("attributes_is_visible_4").checked = true; 
+   document.getElementById("attributes_is_visible_5").checked = true; 
+   document.getElementById("attributes_is_visible_6").checked = true;
+   document.getElementById("attributes_is_visible_1").style.display = "none";
+    document.getElementById("attributes_is_visible_2").style.display = "none";
+    document.getElementById("attributes_is_visible_3").style.display = "none";
+    document.getElementById("attributes_is_visible_4").style.display = "none";
+    document.getElementById("attributes_is_visible_5").style.display = "none";
+    document.getElementById("attributes_is_visible_6").style.display = "none";
+    document.getElementById("attributes_name_1").disabled = true;
+    document.getElementById("attributes_name_2").disabled = true;
+    document.getElementById("attributes_name_3").disabled = true;
+    document.getElementById("attributes_name_4").disabled = true;
+    document.getElementById("attributes_name_5").disabled = true;
+    document.getElementById("attributes_name_6").disabled = true;
+      //if ends here
+      }
+      if(count==0)
+      {
+        var s= document.getElementsByClassName("remove_multi_input_block");
+   for(var i=0;i<s.length;i++)
+   {
+       s[i].style.display="none";
+   }
+      }
+       count=count+1;
+      //function ends here
+      }
+      
+   function myFunction1(g){
+        var x1=document.getElementById("attributes_value_0");
+         var x2=document.getElementById("attributes_value_1");
+         var x3=document.getElementById("attributes_value_2");
+         var x4=document.getElementById("attributes_value_3");
+         var x5=document.getElementById("attributes_value_4");
+         var x6=document.getElementById("attributes_value_5");
+        if(x1.value==""||x2.value==""||x3.value==""||x4.value==""||x5.value==""||x6.value=="")
+          {
+              alert("Author,Language,Publisher Name Can't be Empty");
+          }
+          else
+          {
+              if(g==1){
+                  document.getElementById("pruduct_manager_submit_button").click();
+              }
+              else 
+              document.getElementById("pruduct_manager_draft_button").click();
+          }
+         //function1 closing
+                         }
+                         
+    function validateonsubmit() {
+      myFunction1(1);
+                                }
+    function validateondraft() {
+      myFunction1(2);
+                                }
+    </script>
